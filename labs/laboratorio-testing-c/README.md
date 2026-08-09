@@ -78,10 +78,10 @@ Vas a ver el carrito con tres productos y su total.
 
 **P2** — ¿El total que imprime el programa coincide con lo que calculaste? Si no coincide, ¿cuánto muestra?
 
-> R:
+> R:2800 
 
 ```
-TOTAL_PROGRAMA=
+TOTAL_PROGRAMA=2050
 ```
 _(escribí el número que imprimió el programa)_
 
@@ -131,7 +131,7 @@ Mirá el código en `tests/test_unitarios.c` para entender la estructura de un t
 
 **P3** — ¿Qué hace `carrito_init` y por qué es importante llamarla antes de usar el carrito?
 
-> R:
+> R:Inicializa la variable de tipo INT en 0, es importante ya que al no hacerlo el compilador puede llenarla de datos basura, produce un comportamiento indefinido
 
 ---
 
@@ -169,7 +169,7 @@ make test_unitarios
 > R:
 
 ```
-TEST_PRECIO_UNITARIO_PASA=
+TEST_PRECIO_UNITARIO_PASA=SI
 ```
 _(SI o NO)_
 
@@ -196,6 +196,7 @@ Descomentá `/* test_total_con_cantidad(); */` en el `main()`, compilá y corré
 **P5** — ¿Este test pasa o falla? ¿Qué valor esperaba y qué obtuvo?
 
 > R:
+
 
 ```
 TEST_TOTAL_CANTIDAD_PASA=

@@ -52,7 +52,21 @@ void test_total_con_cantidad(void) {
  *  PARTE C — Escribir un test propio (ver README.md, Parte 7)
  * ═══════════════════════════════════════════════════════════════════════════ */
 
-/* TODO: escribir test_carrito_lleno() */
+void test_carrito_lleno(void){
+    printf("\nTest para verificar si acepta como maximo 4 productos en un carrito\n");
+    Carrito c;
+    carrito_init(&c);
+    Producto p = {"Leche", 350, 2};
+    Producto q = {"Leche", 350, 2};  
+    Producto r = {"Leche", 350, 2};
+    Producto s = {"Leche", 350, 2};
+    Producto t = {"Leche", 350, 2};
+    carrito_agregar(&c, p);
+    carrito_agregar(&c, q);
+    carrito_agregar(&c, r);
+    carrito_agregar(&c, s);
+    ASSERT_IGUAL(0, carrito_agregar(&c, t)); 
+} 
 
 /* ═══════════════════════════════════════════════════════════════════════════
  *  main
@@ -65,7 +79,7 @@ int main(void) {
     /* Descomentar a medida que agregues las funciones: */
     test_total_precio_unitario(); 
     test_total_con_cantidad();    
-    /* test_carrito_lleno();         */
+    test_carrito_lleno();         
     RESUMEN();
     return EXIT_CODE();
 }
